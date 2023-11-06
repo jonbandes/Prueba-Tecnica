@@ -1,0 +1,36 @@
+Instrucciones para correr el Proyecto
+
+Comandos iniciales:
+1.- Clonar el repositorio
+2.- Situarse en la carpeta que contenga el repositorio y posteriormente
+    abrir la terminal
+3.- Correr el comando: npm run dev
+4.- El proyecto fue probado usando la herramienta Insonmia para corroborar los endpoints.
+
+Puntos a tomar en cuenta para las pruebas:
+1.- En el Archivo database.sql se encuentra la estructura de la tabla utilizada en la Base de Datos y
+    ejemplo de tres INSERTs para probar los endpoints.
+
+2.- (POST) Para probar el Login , se coloca la direccion> http://localhost:3000/api/v1/users/login
+    2.1- Los datos solicitados son requeridos en formato JSON,por ejemplo:
+	{
+		"email": "usuario1@example.com",
+		"password": "123d45"
+	}
+	Si la contraseña coincide, entonces permite al usuario ingresar.
+	En caso contrario, arroja un mensaje de error.
+
+3. (GET) Para probar el GetUsers, se creó una función que retorna todos los usuarios existentes 
+	mediante > http://localhost:3000/api/v1/users/
+
+4. (GET) Para probar el GetUsers/:id, se creó una función que retorna el usuario especificado 
+	mediante > http://localhost:3000/api/v1/users/id
+
+5. (POST) Para probar el CreatteUsers/:id, se creó una función que, dados los datos que sean requeridos para cada campo del  
+	registro (revisar estructura de la tabla), inserta dentro de la tabla en la BDD, el registro nuevo mediante > http://localhost:3000/api/v1/users/
+
+5. (PUT) Para probar el UpdateUsers/:id, se creó una función que recibe todos los campos del registro,
+	y actualiza el usuario especificado mediante > http://localhost:3000/api/v1/users/id
+
+6. (DELETE) Para probar el DeleteUsers/:id, se creó una función que elimina el usuario especificado 
+	mediante > http://localhost:3000/api/v1/users/id
