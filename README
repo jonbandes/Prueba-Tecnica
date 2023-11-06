@@ -1,3 +1,7 @@
+Tecnologías utilizadas:
+Nodejs, Express, PostgreSQL, Bcryptjs
+npm i express pg bcrypt nodemon
+
 Instrucciones para correr el Proyecto
 
 Comandos iniciales:
